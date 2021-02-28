@@ -304,6 +304,7 @@ video {
 
 .circle-center__wrapper div:nth-child(2) {
     display: flex;
+    cursor: default;
     flex-direction: column;
     justify-content: center;
     align-items: center
@@ -313,6 +314,11 @@ video {
 .replay {
     width: 18px;
     margin: -12px
+}
+
+.play:hover,
+.replay:hover {
+    cursor: pointer
 }
 
 .circle-top__wrapper,

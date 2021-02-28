@@ -25,9 +25,9 @@ timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(
 
 
 controlPanel.addEventListener("click", (event) => {
-    if (event.target.classList.contains("circle__small")) {
+    if (event.target.getAttribute("data-video") && this.getAttribute("data-sound")) {
         sounds.forEach(el => el.classList.remove("active"));
-        if (event.target.classList.contains("circle__small")) {
+        if (event.target.getAttribute("data-video") && this.getAttribute("data-sound")) {
             event.target.classList.add("active");
         }
     }
@@ -58,7 +58,12 @@ const restartSong = song => {
     let currentTime = song.currentTime;
     song.currentTime = 0;
     console.log("ciao")
-    timeControlPanel.classList.remove("no__active")
+    if (song.paused) {
+        timeControlPanel.classList.remove("no__active")
+    } else {
+        timeControlPanel.classList.add("no__active")
+    }
+
 }
 
 
@@ -75,6 +80,11 @@ const checkPlaying = song => {
         song.play();
         video.play();
         play.src = "./img/svg/pause.svg";
+        sounds.forEach(el => {
+            if (video.getAttribute('src') == el.getAttribute("data-video")) {
+                el.classList.add("active")
+            }
+        });
         timeControlPanel.classList.add("no__active")
     } else {
         song.pause();
