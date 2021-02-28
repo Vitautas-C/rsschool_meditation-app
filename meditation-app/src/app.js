@@ -25,9 +25,9 @@ timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(
 
 
 controlPanel.addEventListener("click", (event) => {
-    if (event.target.getAttribute("data-video") && this.getAttribute("data-sound")) {
+    if (event.target.getAttribute("data-video") && event.target.getAttribute("data-sound")) {
         sounds.forEach(el => el.classList.remove("active"));
-        if (event.target.getAttribute("data-video") && this.getAttribute("data-sound")) {
+        if (event.target.getAttribute("data-video") && event.target.getAttribute("data-sound")) {
             event.target.classList.add("active");
         }
     }
