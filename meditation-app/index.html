@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study projects</title>
+    <link rel="stylesheet" href="dist/style.css">
+
+</head>
+
+<body class="projects">
+    <main class="main">
+
+        <!-- Сircle start -->
+        <section class="circle">
+            <div class="vid-container">
+                <video loop>
+                  <source src="./video/sea.mp4"  type="video/mp4">
+                </video>
+                <audio class="song">
+                    <source src="./sounds/sound_sea.mp3" type="audio/mp3">
+                  </audio>
+                <div class="circle__big sound-picker">
+                    <div class="circle-top__wrapper">
+                        <div class="circle__small" data-sound="./sounds/sound_sea.mp3" data-video="./video/sea.mp4"></div>
+                        <div class="circle__small" data-sound=" ./sounds/sound_meadow.mp3" data-video="./video/meadow.mp4"></div>
+                    </div>
+                    <div class="circle-center__wrapper">
+                        <div class="circle__small" data-sound="./sounds/sound_fire.mp3" data-video="./video/fire.mp4"></div>
+                        <div class="circle__small">
+                            <img src="./img/svg/play.svg" class="play"></img>
+
+                            <h3 class="time-display">0:00</h3>
+
+                            <img src="./img/svg/replay.svg" class="replay"></img>
+                        </div>
+                        <div class="circle__small" data-sound="./sounds/sound_forest.mp3" data-video="./video/forest.mp4"></div>
+                    </div>
+                    <div class="circle-bottom__wrapper">
+                        <div class="circle__small" data-sound="./sounds/sound_rain.mp3" data-video="./video/rain.mp4"></div>
+                        <div class="circle__small" data-sound="./sounds/sound_lake.mp3" data-video="./video/lake.mp4"></div>
+                    </div>
+                </div>
+
+                <div class="time-select">
+                    <div data-time="60">1 Minute</div>
+                    <div data-time="300" class="medium-mins">5 Minutes</div>
+                    <div data-time="600" class="long-mins">10 Minutes</div>
+                </div>
+        </section>
+        <!-- Сircle end -->
+
+    </main>
+
+    <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+
+</html>
